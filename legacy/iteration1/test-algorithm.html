@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>Algorithm Test</title>
+</head>
+<body>
+  <h2>간격 반복 알고리즘 테스트 (콘솔 확인)</h2>
+  <pre id="log"></pre>
+  <script type="module">
+    import { selectDailyQuestions, handleCorrectAnswer, handleWrongAnswer, getTodayStr, addDays } from './js/quiz-engine.js';
+    import { loadProgress, resetProgress } from './js/storage.js';
+
+    const log = document.getElementById('log');
+    function print(msg) {
+      log.textContent += msg + '\n';
+      console.log(msg);
+    }
+
+    // 테스트 시작 - 이력 초기화
+    resetProgress();
+    print('=== 테스트 시작 ===');
+    print(`오늘 날짜: ${getTodayStr()}`);
+    print(`addDays 테스트: ${getTodayStr()} + 3일 = ${addDays(getTodayStr(), 3)}`);
+
+    // 문제 은행 로드
+    const res = await fetch('./question_bank.json');
+    const bank = await res.json();
+    print(`\n문제 은행 로드: ${bank.length}개 문제`);
+
+    // 테스트 1: 초기 상태에서 10개 추출
+    const daily = selectDailyQuestions(bank);
+    print(`\n[테스트 1] 오늘의 문제 추출: ${daily.length}개`);
+    daily.forEach((q, i) => print(`  ${i + 1}. [${q.id}] ${q.question.substring(0, 30)}...`));
+
+    // 테스트 2: 정답 처리
+    print('\n[테스트 2] q001 정답 처리');
+    const r1 = handleCorrectAnswer('q001');
+    print(`  결과: interval=${r1.interval}, status=${r1.status}, next_review=${r1.next_review_date}`);
+
+    // 테스트 3: 연속 정답 - interval 두 배
+    print('\n[테스트 3] q001 연속 정답 처리');
+    const r2 = handleCorrectAnswer('q001');
+    print(`  결과: interval=${r2.interval}, status=${r2.status}, next_review=${r2.next_review_date}`);
+
+    const r3 = handleCorrectAnswer('q001');
+    print(`  한번 더: interval=${r3.interval}, status=${r3.status}, next_review=${r3.next_review_date}`);
+
+    // 테스트 4: 오답 처리 - interval 1로 초기화
+    print('\n[테스트 4] q001 오답 처리');
+    const r4 = handleWrongAnswer('q001');
+    print(`  결과: interval=${r4.interval}, status=${r4.status}, next_review=${r4.next_review_date}`);
+    print(`  -> interval이 1로 초기화되었는지 확인: ${r4.interval === 1 ? 'PASS ✅' : 'FAIL ❌'}`);
+
+    // 테스트 5: 전체 progress 상태 확인
+    print('\n[테스트 5] 전체 progress 상태');
+    const progress = loadProgress();
+    Object.entries(progress).forEach(([k, v]) => {
+      print(`  ${k}: status=${v.status}, interval=${v.interval}, next=${v.next_review_date}`);
+    });
+
+    // 테스트 6: interval 두 배 증가 검증
+    print('\n[테스트 6] interval 두 배 증가 패턴 검증');
+    resetProgress();
+    const intervals = [];
+    for (let i = 0; i < 5; i++) {
+      const r = handleCorrectAnswer('q002');
+      intervals.push(r.interval);
+    }
+    print(`  연속 정답 interval 변화: ${intervals.join(' -> ')}`);
+    const expected = [1, 2, 4, 8, 16];
+    const passed = intervals.every((v, i) => v === expected[i]);
+    print(`  기대값 [1,2,4,8,16] 일치 여부: ${passed ? 'PASS ✅' : 'FAIL ❌'}`);
+
+    // 정리
+    resetProgress();
+    print('\n=== 모든 테스트 완료 ===');
+  </script>
+</body>
+</html>
