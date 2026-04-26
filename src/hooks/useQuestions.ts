@@ -77,24 +77,25 @@ export function useQuestions() {
       try {
         const supabase = getSupabase();
 
-        let allData: any[] = [];
+        let allData: Record<string, unknown>[] = [];
         let from = 0;
-        const step = 1000;
+        const PAGE_SIZE = 1000;
 
+        // Supabase PostgREST caps at 1000 rows per request — loop until all pages fetched
         while (true) {
           const { data, error } = await supabase
             .from('questions')
             .select('*')
             .eq('meta->>is_active', 'true')
-            .range(from, from + step - 1);
+            .range(from, from + PAGE_SIZE - 1);
 
           if (error) throw new Error(error.message);
           if (!data || data.length === 0) break;
 
-          allData = allData.concat(data);
+          allData = [...allData, ...(data as Record<string, unknown>[])];
 
-          if (data.length < step) break;
-          from += step;
+          if (data.length < PAGE_SIZE) break;
+          from += PAGE_SIZE;
         }
 
         const questions = allData.map(mapRow);
