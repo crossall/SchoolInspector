@@ -2459,7 +2459,7 @@
   {
     "id": "insa_seoul_all_002",
     "category": "인사실무",
-    "subcategory": "파견",
+    "subcategory": "임용",
     "type": "multiple_choice",
     "meta": {
       "year": 2026,
@@ -2489,7 +2489,7 @@
   {
     "id": "insa_seoul_all_003",
     "category": "인사실무",
-    "subcategory": "직위해제",
+    "subcategory": "임용",
     "type": "multiple_choice",
     "meta": {
       "year": 2026,
@@ -2519,7 +2519,7 @@
   {
     "id": "insa_seoul_all_004",
     "category": "인사실무",
-    "subcategory": "초빙교사",
+    "subcategory": "임용",
     "type": "ordering",
     "meta": {
       "year": 2026,
@@ -2555,7 +2555,7 @@
   {
     "id": "insa_seoul_all_005",
     "category": "인사실무",
-    "subcategory": "전직",
+    "subcategory": "임용",
     "type": "fill_in_blank",
     "meta": {
       "year": 2026,
@@ -2590,7 +2590,7 @@
   {
     "id": "insa_seoul_all_006",
     "category": "인사실무",
-    "subcategory": "겸임겸직",
+    "subcategory": "임용",
     "type": "ox_quiz",
     "meta": {
       "year": 2026,
@@ -2618,7 +2618,7 @@
   {
     "id": "insa_seoul_all_007",
     "category": "인사실무",
-    "subcategory": "퇴직면직",
+    "subcategory": "임용",
     "type": "multiple_choice",
     "meta": {
       "year": 2026,
@@ -2648,7 +2648,7 @@
   {
     "id": "insa_seoul_all_008",
     "category": "인사실무",
-    "subcategory": "퇴직면직",
+    "subcategory": "임용",
     "type": "ox_quiz",
     "meta": {
       "year": 2026,
@@ -2676,7 +2676,7 @@
   {
     "id": "insa_seoul_all_009",
     "category": "인사실무",
-    "subcategory": "보직교사",
+    "subcategory": "임용",
     "type": "fill_in_blank",
     "meta": {
       "year": 2026,
@@ -2712,7 +2712,7 @@
   {
     "id": "insa_seoul_all_010",
     "category": "인사실무",
-    "subcategory": "초빙교사",
+    "subcategory": "임용",
     "type": "multiple_choice",
     "meta": {
       "year": 2026,
@@ -2769,7 +2769,7 @@
   {
     "id": "insa_seoul_all_012",
     "category": "인사실무",
-    "subcategory": "전직",
+    "subcategory": "임용",
     "type": "multiple_choice",
     "meta": {
       "year": 2026,
@@ -2799,7 +2799,7 @@
   {
     "id": "insa_seoul_all_013",
     "category": "인사실무",
-    "subcategory": "공모교장",
+    "subcategory": "임용",
     "type": "fill_in_blank",
     "meta": {
       "year": 2026,
@@ -2833,7 +2833,7 @@
   {
     "id": "insa_seoul_all_014",
     "category": "인사실무",
-    "subcategory": "퇴직면직",
+    "subcategory": "임용",
     "type": "ordering",
     "meta": {
       "year": 2026,
@@ -2869,7 +2869,7 @@
   {
     "id": "insa_seoul_all_015",
     "category": "인사실무",
-    "subcategory": "파견",
+    "subcategory": "임용",
     "type": "multiple_choice",
     "meta": {
       "year": 2026,
@@ -2899,7 +2899,7 @@
   {
     "id": "insa_seoul_all_016",
     "category": "인사실무",
-    "subcategory": "직위해제",
+    "subcategory": "임용",
     "type": "ox_quiz",
     "meta": {
       "year": 2026,
@@ -2927,7 +2927,7 @@
   {
     "id": "insa_seoul_all_017",
     "category": "인사실무",
-    "subcategory": "퇴직면직",
+    "subcategory": "임용",
     "type": "multiple_choice",
     "meta": {
       "year": 2026,
@@ -2957,7 +2957,7 @@
   {
     "id": "insa_seoul_all_018",
     "category": "인사실무",
-    "subcategory": "보직교사",
+    "subcategory": "임용",
     "type": "fill_in_blank",
     "meta": {
       "year": 2026,
@@ -3018,7 +3018,7 @@
   {
     "id": "insa_seoul_all_020",
     "category": "인사실무",
-    "subcategory": "직위해제",
+    "subcategory": "임용",
     "type": "multiple_choice",
     "meta": {
       "year": 2026,
@@ -3175,7 +3175,7 @@
   {
     "id": "insa_seoul_all_025",
     "category": "인사실무",
-    "subcategory": "파견",
+    "subcategory": "임용",
     "type": "multiple_choice",
     "meta": {
       "year": 2026,
@@ -3233,7 +3233,7 @@
   {
     "id": "insa_seoul_all_027",
     "category": "인사실무",
-    "subcategory": "초빙교사",
+    "subcategory": "임용",
     "type": "fill_in_blank",
     "meta": {
       "year": 2026,
@@ -3266,7 +3266,7 @@
   {
     "id": "insa_seoul_all_028",
     "category": "인사실무",
-    "subcategory": "직위해제",
+    "subcategory": "임용",
     "type": "multiple_choice",
     "meta": {
       "year": 2026,
@@ -3296,7 +3296,7 @@
   {
     "id": "insa_seoul_all_029",
     "category": "인사실무",
-    "subcategory": "퇴직면직",
+    "subcategory": "임용",
     "type": "ox_quiz",
     "meta": {
       "year": 2026,
@@ -3324,7 +3324,7 @@
   {
     "id": "insa_seoul_all_030",
     "category": "인사실무",
-    "subcategory": "퇴직면직",
+    "subcategory": "임용",
     "type": "multiple_choice",
     "meta": {
       "year": 2026,
@@ -3384,7 +3384,7 @@
   {
     "id": "insa_seoul_all_032",
     "category": "인사실무",
-    "subcategory": "보직교사",
+    "subcategory": "임용",
     "type": "ox_quiz",
     "meta": {
       "year": 2026,
@@ -3412,7 +3412,7 @@
   {
     "id": "insa_seoul_all_033",
     "category": "인사실무",
-    "subcategory": "직위해제",
+    "subcategory": "임용",
     "type": "fill_in_blank",
     "meta": {
       "year": 2026,
@@ -3446,7 +3446,7 @@
   {
     "id": "insa_seoul_all_034",
     "category": "인사실무",
-    "subcategory": "전직",
+    "subcategory": "임용",
     "type": "multiple_choice",
     "meta": {
       "year": 2026,
@@ -3476,7 +3476,7 @@
   {
     "id": "insa_seoul_all_035",
     "category": "인사실무",
-    "subcategory": "퇴직면직",
+    "subcategory": "임용",
     "type": "ordering",
     "meta": {
       "year": 2026,
@@ -3512,7 +3512,7 @@
   {
     "id": "insa_seoul_all_036",
     "category": "인사실무",
-    "subcategory": "퇴직면직",
+    "subcategory": "임용",
     "type": "multiple_choice",
     "meta": {
       "year": 2026,
@@ -3542,7 +3542,7 @@
   {
     "id": "insa_seoul_all_037",
     "category": "인사실무",
-    "subcategory": "퇴직면직",
+    "subcategory": "임용",
     "type": "fill_in_blank",
     "meta": {
       "year": 2026,
@@ -3576,7 +3576,7 @@
   {
     "id": "insa_seoul_all_038",
     "category": "인사실무",
-    "subcategory": "초빙교사",
+    "subcategory": "임용",
     "type": "ox_quiz",
     "meta": {
       "year": 2026,
@@ -3602,7 +3602,7 @@
   {
     "id": "insa_seoul_all_039",
     "category": "인사실무",
-    "subcategory": "겸임겸직",
+    "subcategory": "임용",
     "type": "multiple_choice",
     "meta": {
       "year": 2026,
@@ -3632,7 +3632,7 @@
   {
     "id": "insa_seoul_all_040",
     "category": "인사실무",
-    "subcategory": "파견",
+    "subcategory": "임용",
     "type": "ordering",
     "meta": {
       "year": 2026,
@@ -3793,7 +3793,7 @@
   {
     "id": "insa_seoul_all_045",
     "category": "인사실무",
-    "subcategory": "전직",
+    "subcategory": "임용",
     "type": "multiple_choice",
     "meta": {
       "year": 2026,
@@ -3822,7 +3822,7 @@
   {
     "id": "insa_seoul_all_046",
     "category": "인사실무",
-    "subcategory": "퇴직면직",
+    "subcategory": "임용",
     "type": "ox_quiz",
     "meta": {
       "year": 2026,
@@ -3880,7 +3880,7 @@
   {
     "id": "insa_seoul_all_048",
     "category": "인사실무",
-    "subcategory": "보직교사",
+    "subcategory": "임용",
     "type": "fill_in_blank",
     "meta": {
       "year": 2026,
@@ -3941,7 +3941,7 @@
   {
     "id": "insa_seoul_all_050",
     "category": "인사실무",
-    "subcategory": "겸임겸직",
+    "subcategory": "임용",
     "type": "multiple_choice",
     "meta": {
       "year": 2026,
@@ -3971,7 +3971,7 @@
   {
     "id": "insa_seoul_all_051",
     "category": "인사실무",
-    "subcategory": "퇴직면직",
+    "subcategory": "임용",
     "type": "ox_quiz",
     "meta": {
       "year": 2026,
@@ -3999,7 +3999,7 @@
   {
     "id": "insa_seoul_all_052",
     "category": "인사실무",
-    "subcategory": "파견",
+    "subcategory": "임용",
     "type": "multiple_choice",
     "meta": {
       "year": 2026,
@@ -4029,7 +4029,7 @@
   {
     "id": "insa_seoul_all_053",
     "category": "인사실무",
-    "subcategory": "초빙교사",
+    "subcategory": "임용",
     "type": "fill_in_blank",
     "meta": {
       "year": 2026,
@@ -4061,7 +4061,7 @@
   {
     "id": "insa_seoul_all_054",
     "category": "인사실무",
-    "subcategory": "보직교사",
+    "subcategory": "임용",
     "type": "ordering",
     "meta": {
       "year": 2026,
@@ -4097,7 +4097,7 @@
   {
     "id": "insa_seoul_all_055",
     "category": "인사실무",
-    "subcategory": "공모교장",
+    "subcategory": "임용",
     "type": "multiple_choice",
     "meta": {
       "year": 2026,
@@ -4127,7 +4127,7 @@
   {
     "id": "insa_seoul_all_056",
     "category": "인사실무",
-    "subcategory": "직위해제",
+    "subcategory": "임용",
     "type": "ox_quiz",
     "meta": {
       "year": 2026,
@@ -4155,7 +4155,7 @@
   {
     "id": "insa_seoul_all_057",
     "category": "인사실무",
-    "subcategory": "초빙교사",
+    "subcategory": "임용",
     "type": "fill_in_blank",
     "meta": {
       "year": 2026,
@@ -4188,7 +4188,7 @@
   {
     "id": "insa_seoul_all_058",
     "category": "인사실무",
-    "subcategory": "전직",
+    "subcategory": "임용",
     "type": "multiple_choice",
     "meta": {
       "year": 2026,
@@ -4218,7 +4218,7 @@
   {
     "id": "insa_seoul_all_059",
     "category": "인사실무",
-    "subcategory": "초빙교사",
+    "subcategory": "임용",
     "type": "ordering",
     "meta": {
       "year": 2026,
@@ -4254,7 +4254,7 @@
   {
     "id": "insa_seoul_all_060",
     "category": "인사실무",
-    "subcategory": "퇴직면직",
+    "subcategory": "임용",
     "type": "fill_in_blank",
     "meta": {
       "year": 2026,
@@ -4410,7 +4410,7 @@
   {
     "id": "insa_seoul_all_065",
     "category": "인사실무",
-    "subcategory": "공모교장",
+    "subcategory": "임용",
     "type": "ox_quiz",
     "meta": {
       "year": 2026,
@@ -4438,7 +4438,7 @@
   {
     "id": "insa_seoul_all_066",
     "category": "인사실무",
-    "subcategory": "겸임겸직",
+    "subcategory": "임용",
     "type": "fill_in_blank",
     "meta": {
       "year": 2026,
@@ -4472,7 +4472,7 @@
   {
     "id": "insa_seoul_all_067",
     "category": "인사실무",
-    "subcategory": "공모교장",
+    "subcategory": "임용",
     "type": "ordering",
     "meta": {
       "year": 2026,
@@ -4508,7 +4508,7 @@
   {
     "id": "insa_seoul_all_068",
     "category": "인사실무",
-    "subcategory": "퇴직면직",
+    "subcategory": "임용",
     "type": "multiple_choice",
     "meta": {
       "year": 2026,
@@ -4538,7 +4538,7 @@
   {
     "id": "insa_seoul_all_069",
     "category": "인사실무",
-    "subcategory": "퇴직면직",
+    "subcategory": "임용",
     "type": "ox_quiz",
     "meta": {
       "year": 2026,
@@ -4601,7 +4601,7 @@
   {
     "id": "insa_seoul_all_071",
     "category": "인사실무",
-    "subcategory": "전직",
+    "subcategory": "임용",
     "type": "ox_quiz",
     "meta": {
       "year": 2026,
@@ -4627,7 +4627,7 @@
   {
     "id": "insa_seoul_all_072",
     "category": "인사실무",
-    "subcategory": "파견",
+    "subcategory": "임용",
     "type": "multiple_choice",
     "meta": {
       "year": 2026,
@@ -4657,7 +4657,7 @@
   {
     "id": "insa_seoul_all_073",
     "category": "인사실무",
-    "subcategory": "퇴직면직",
+    "subcategory": "임용",
     "type": "ordering",
     "meta": {
       "year": 2026,
@@ -4691,7 +4691,7 @@
   {
     "id": "insa_seoul_all_074",
     "category": "인사실무",
-    "subcategory": "보직교사",
+    "subcategory": "임용",
     "type": "fill_in_blank",
     "meta": {
       "year": 2026,
@@ -4724,7 +4724,7 @@
   {
     "id": "insa_seoul_all_075",
     "category": "인사실무",
-    "subcategory": "초빙교사",
+    "subcategory": "임용",
     "type": "multiple_choice",
     "meta": {
       "year": 2026,
@@ -4781,7 +4781,7 @@
   {
     "id": "insa_seoul_all_077",
     "category": "인사실무",
-    "subcategory": "퇴직면직",
+    "subcategory": "임용",
     "type": "multiple_choice",
     "meta": {
       "year": 2026,
@@ -4811,7 +4811,7 @@
   {
     "id": "insa_seoul_all_078",
     "category": "인사실무",
-    "subcategory": "파견",
+    "subcategory": "임용",
     "type": "ox_quiz",
     "meta": {
       "year": 2026,
@@ -4839,7 +4839,7 @@
   {
     "id": "insa_seoul_all_079",
     "category": "인사실무",
-    "subcategory": "퇴직면직",
+    "subcategory": "임용",
     "type": "fill_in_blank",
     "meta": {
       "year": 2026,
@@ -4874,7 +4874,7 @@
   {
     "id": "insa_seoul_all_080",
     "category": "인사실무",
-    "subcategory": "직위해제",
+    "subcategory": "임용",
     "type": "multiple_choice",
     "meta": {
       "year": 2026,
@@ -4962,7 +4962,7 @@
   {
     "id": "insa_seoul_all_083",
     "category": "인사실무",
-    "subcategory": "보직교사",
+    "subcategory": "임용",
     "type": "fill_in_blank",
     "meta": {
       "year": 2026,
@@ -4995,7 +4995,7 @@
   {
     "id": "insa_seoul_all_084",
     "category": "인사실무",
-    "subcategory": "퇴직면직",
+    "subcategory": "임용",
     "type": "ordering",
     "meta": {
       "year": 2026,
@@ -5029,7 +5029,7 @@
   {
     "id": "insa_seoul_all_085",
     "category": "인사실무",
-    "subcategory": "직위해제",
+    "subcategory": "임용",
     "type": "multiple_choice",
     "meta": {
       "year": 2026,
@@ -5059,7 +5059,7 @@
   {
     "id": "insa_seoul_all_086",
     "category": "인사실무",
-    "subcategory": "전직",
+    "subcategory": "임용",
     "type": "fill_in_blank",
     "meta": {
       "year": 2026,
@@ -5094,7 +5094,7 @@
   {
     "id": "insa_seoul_all_087",
     "category": "인사실무",
-    "subcategory": "파견",
+    "subcategory": "임용",
     "type": "ox_quiz",
     "meta": {
       "year": 2026,
@@ -5122,7 +5122,7 @@
   {
     "id": "insa_seoul_all_088",
     "category": "인사실무",
-    "subcategory": "전직",
+    "subcategory": "임용",
     "type": "multiple_choice",
     "meta": {
       "year": 2026,
@@ -5150,7 +5150,7 @@
   {
     "id": "insa_seoul_all_089",
     "category": "인사실무",
-    "subcategory": "공모교장",
+    "subcategory": "임용",
     "type": "ox_quiz",
     "meta": {
       "year": 2026,
@@ -5178,7 +5178,7 @@
   {
     "id": "insa_seoul_all_090",
     "category": "인사실무",
-    "subcategory": "퇴직면직",
+    "subcategory": "임용",
     "type": "multiple_choice",
     "meta": {
       "year": 2026,
@@ -5236,7 +5236,7 @@
   {
     "id": "insa_seoul_all_092",
     "category": "인사실무",
-    "subcategory": "전직",
+    "subcategory": "임용",
     "type": "multiple_choice",
     "meta": {
       "year": 2026,
@@ -5264,7 +5264,7 @@
   {
     "id": "insa_seoul_all_093",
     "category": "인사실무",
-    "subcategory": "보직교사",
+    "subcategory": "임용",
     "type": "ordering",
     "meta": {
       "year": 2026,
@@ -5331,7 +5331,7 @@
   {
     "id": "insa_seoul_all_095",
     "category": "인사실무",
-    "subcategory": "파견",
+    "subcategory": "임용",
     "type": "ox_quiz",
     "meta": {
       "year": 2026,
@@ -5359,7 +5359,7 @@
   {
     "id": "insa_seoul_all_096",
     "category": "인사실무",
-    "subcategory": "직위해제",
+    "subcategory": "임용",
     "type": "multiple_choice",
     "meta": {
       "year": 2026,
@@ -5389,7 +5389,7 @@
   {
     "id": "insa_seoul_all_097",
     "category": "인사실무",
-    "subcategory": "퇴직면직",
+    "subcategory": "임용",
     "type": "fill_in_blank",
     "meta": {
       "year": 2026,
@@ -5424,7 +5424,7 @@
   {
     "id": "insa_seoul_all_098",
     "category": "인사실무",
-    "subcategory": "공모교장",
+    "subcategory": "임용",
     "type": "ordering",
     "meta": {
       "year": 2026,
@@ -5458,7 +5458,7 @@
   {
     "id": "insa_seoul_all_099",
     "category": "인사실무",
-    "subcategory": "초빙교사",
+    "subcategory": "임용",
     "type": "multiple_choice",
     "meta": {
       "year": 2026,
@@ -5487,7 +5487,7 @@
   {
     "id": "insa_seoul_all_100",
     "category": "인사실무",
-    "subcategory": "퇴직면직",
+    "subcategory": "임용",
     "type": "ox_quiz",
     "meta": {
       "year": 2026,
