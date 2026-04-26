@@ -108,7 +108,7 @@ export function useAuth() {
     const supabase = getSupabase();
     const { error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
-      options: { redirectTo: `${window.location.origin}/` },
+      options: { redirectTo: `${window.location.origin}/auth/callback` },
     });
     if (error) console.error('[auth] Google sign-in failed:', error);
   }, []);
@@ -118,7 +118,7 @@ export function useAuth() {
     const { error } = await supabase.auth.signInWithOAuth({
       provider: 'kakao',
       options: {
-        redirectTo: `${window.location.origin}/`,
+        redirectTo: `${window.location.origin}/auth/callback`,
         scopes: 'profile_nickname',
       },
     });
@@ -132,7 +132,7 @@ export function useAuth() {
   }, []);
 
   const updateProfile = useCallback(async (
-    updates: { target_region?: string; target_school_level?: string; is_premium?: boolean }
+    updates: { target_region?: string; target_school_level?: string; is_pro?: boolean }
   ) => {
     if (!state.user) return null;
     const supabase = getSupabase();

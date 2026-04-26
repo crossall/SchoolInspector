@@ -140,13 +140,13 @@ export default function Dashboard({
 
   const handleCardClick = useCallback(
     (card: CategoryCard) => {
-      if (!card.isFree && !profile.is_premium) {
+      if (!card.isFree && !profile.is_pro) {
         setShowPaywall(true);
         return;
       }
       setActiveCard(card);
     },
-    [profile.is_premium]
+    [profile.is_pro]
   );
 
   const handleSubcategorySelect = useCallback(
@@ -189,7 +189,7 @@ export default function Dashboard({
 
         {/* ── Top Action Bar ── */}
         <div className="flex items-center justify-between">
-          {profile.is_premium ? (
+          {profile.is_pro ? (
             <div className="flex items-center gap-1.5 bg-amber-50 border border-amber-200 rounded-full px-3 py-1.5">
               <Crown size={13} className="text-amber-500" />
               <span className="text-xs font-bold text-amber-700">프리미엄</span>
@@ -249,7 +249,7 @@ export default function Dashboard({
           </h2>
           <div className="grid grid-cols-2 gap-3">
             {CATEGORY_CARDS.map((card) => {
-              const locked = !card.isFree && !profile.is_premium;
+              const locked = !card.isFree && !profile.is_pro;
               const available = hasQuestions(card);
               const { Icon } = card;
 

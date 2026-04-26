@@ -8,8 +8,7 @@ export interface Profile {
   nickname: string | null;
   target_region: string | null;
   target_school_level: string | null;
-  is_premium: boolean;
-  is_pro?: boolean;   // PRO 유료 플랜 가입 여부 (01_setup_progress_and_pro.sql 적용 후 활성)
+  is_pro: boolean;
   created_at: string;
 }
 

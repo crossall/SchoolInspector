@@ -199,7 +199,7 @@ export default function Home() {
       <QuizView
         questions={sessionQuestions}
         categoryLabel={sessionLabel}
-        isPremium={profile?.is_premium ?? false}
+        isPremium={profile?.is_pro ?? false}
         userId={user?.id}
         onMarkCorrect={markCorrect}
         onMarkIncorrect={markIncorrect}
