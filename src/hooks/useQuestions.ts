@@ -77,15 +77,27 @@ export function useQuestions() {
       try {
         const supabase = getSupabase();
 
-        const { data, error } = await supabase
-          .from('questions')
-          .select('*')
-          .eq('meta->>is_active', 'true');
+        let allData: any[] = [];
+        let from = 0;
+        const step = 1000;
 
-        if (error) throw new Error(error.message);
-        if (!data) throw new Error('No data returned');
+        while (true) {
+          const { data, error } = await supabase
+            .from('questions')
+            .select('*')
+            .eq('meta->>is_active', 'true')
+            .range(from, from + step - 1);
 
-        const questions = data.map(mapRow);
+          if (error) throw new Error(error.message);
+          if (!data || data.length === 0) break;
+
+          allData = allData.concat(data);
+
+          if (data.length < step) break;
+          from += step;
+        }
+
+        const questions = allData.map(mapRow);
         setState({ questions, loading: false, error: null });
       } catch (err) {
         const message = err instanceof Error ? err.message : 'Unknown error';
