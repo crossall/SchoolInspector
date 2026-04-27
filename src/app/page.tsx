@@ -1,7 +1,7 @@
 // page.tsx - 메인 페이지: 인증 + 온보딩 + 대시보드 + 퀴즈 라우팅
 'use client';
 
-import { useState, useCallback, useMemo } from 'react';
+import { useState, useCallback, useMemo, useEffect } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { useProgress } from '@/hooks/useProgress';
 import { useQuestions } from '@/hooks/useQuestions';
@@ -44,6 +44,11 @@ export default function Home() {
   } = useQuestions();
 
   const [view, setView] = useState<View>('dashboard');
+
+  // 뷰 전환마다 스크롤 최상단으로 리셋 — SPA 특성상 scroll position이 유지되어 상단 콘텐츠가 가려지는 문제 방지
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, [view]);
   const [sessionQuestions, setSessionQuestions] = useState<
     import('@/lib/types').Question[]
   >([]);

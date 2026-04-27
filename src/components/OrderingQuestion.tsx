@@ -58,7 +58,7 @@ function SortableItem({ item, index, answered, isCorrect }: SortableItemProps) {
     <div
       ref={setNodeRef}
       style={{ ...style, touchAction: answered ? undefined : 'none' }}
-      className={`flex items-center gap-3 rounded-xl px-4 py-4 transition-all ${cardClass} ${answered ? '' : 'cursor-grab active:cursor-grabbing'}`}
+      className={`flex items-center gap-3 rounded-xl px-4 py-4 transition-[background-color,border-color,box-shadow,opacity] ${cardClass} ${answered ? '' : 'cursor-grab active:cursor-grabbing'}`}
       {...(!answered ? { ...attributes, ...listeners } : {})}
     >
       {/* 그립 핸들 (시각 표시용) */}
