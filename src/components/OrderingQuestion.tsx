@@ -57,15 +57,14 @@ function SortableItem({ item, index, answered, isCorrect }: SortableItemProps) {
   return (
     <div
       ref={setNodeRef}
-      style={style}
-      className={`flex items-center gap-3 rounded-xl px-4 py-4 transition-all ${cardClass}`}
+      style={{ ...style, touchAction: answered ? undefined : 'none' }}
+      className={`flex items-center gap-3 rounded-xl px-4 py-4 transition-all ${cardClass} ${answered ? '' : 'cursor-grab active:cursor-grabbing'}`}
+      {...(!answered ? { ...attributes, ...listeners } : {})}
     >
-      {/* 그립 핸들 */}
+      {/* 그립 핸들 (시각 표시용) */}
       <div
-        {...attributes}
-        {...listeners}
-        className="flex flex-col gap-[3px] cursor-grab active:cursor-grabbing shrink-0 p-1"
-        aria-label="드래그 핸들"
+        className="flex flex-col gap-[3px] shrink-0 p-1"
+        aria-hidden="true"
       >
         {[0, 1, 2].map((row) => (
           <div key={row} className="flex gap-[3px]">

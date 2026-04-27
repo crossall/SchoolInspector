@@ -169,7 +169,10 @@ export default function Dashboard({
   return (
     <div className="min-h-screen bg-slate-50 pb-20">
       {/* ── Header ── */}
-      <header className="bg-white border-b border-slate-100 px-4 pt-8 pb-6">
+      <header
+        className="bg-white border-b border-slate-100 px-4 pb-6"
+        style={{ paddingTop: 'max(2rem, env(safe-area-inset-top))' }}
+      >
         <div className="max-w-lg mx-auto">
           <p className="text-xs font-semibold text-indigo-400 uppercase tracking-widest mb-1">
             교육전문직 문제은행

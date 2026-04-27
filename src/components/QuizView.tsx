@@ -159,7 +159,10 @@ export default function QuizView({
   return (
     <div className="min-h-screen bg-slate-50">
       {/* Top Bar */}
-      <div className="bg-white border-b border-slate-100 px-4 py-3 flex items-center justify-between">
+      <div
+        className="bg-white border-b border-slate-100 px-4 flex items-center justify-between"
+        style={{ paddingTop: 'max(0.75rem, env(safe-area-inset-top))', paddingBottom: '0.75rem' }}
+      >
         <button
           onClick={handleEndSession}
           className="w-11 h-11 flex items-center justify-center text-slate-400 hover:text-slate-600 transition-colors"
