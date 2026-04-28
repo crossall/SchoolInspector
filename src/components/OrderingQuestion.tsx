@@ -2,7 +2,7 @@
 // dnd-kit PointerSensor (마우스+터치 통합)
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, memo } from 'react';
 import {
   DndContext,
   closestCenter,
@@ -37,7 +37,7 @@ interface SortableItemProps {
   isCorrect: boolean | null;
 }
 
-function SortableItem({ item, index, answered, isCorrect }: SortableItemProps) {
+const SortableItem = memo(function SortableItem({ item, index, answered, isCorrect }: SortableItemProps) {
   const { attributes, listeners, setNodeRef, transform, transition, isDragging } =
     useSortable({ id: item });
 
@@ -105,7 +105,7 @@ function SortableItem({ item, index, answered, isCorrect }: SortableItemProps) {
       )}
     </div>
   );
-}
+});
 
 export default function OrderingQuestion({ question, answered, onSubmit }: Props) {
   const [orderedItems, setOrderedItems] = useState<string[]>(

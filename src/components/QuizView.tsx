@@ -165,6 +165,7 @@ export default function QuizView({
       >
         <button
           onClick={handleEndSession}
+          aria-label="문제 풀기 종료"
           className="w-11 h-11 flex items-center justify-center text-slate-400 hover:text-slate-600 transition-colors"
         >
           ✕

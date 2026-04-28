@@ -12,8 +12,10 @@ interface Props {
   onSubmit: (filledAnswer: string[]) => void;
 }
 
+const BLANK_MARKER = '{{blank}}';
+
 export default function FillInBlankQuestion({ question, answered, onSubmit }: Props) {
-  const segments = question.question.split('{{blank}}');
+  const segments = question.question.split(BLANK_MARKER);
   const blankCount = segments.length - 1;
 
   const [slots, setSlots] = useState<(string | null)[]>(

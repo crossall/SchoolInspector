@@ -49,6 +49,13 @@ export default function Home() {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' });
   }, [view]);
+
+  // 미인증 → 로그인 페이지로 (렌더 중 side effect 방지)
+  useEffect(() => {
+    if (!authLoading && !user) {
+      window.location.href = '/login';
+    }
+  }, [authLoading, user]);
   const [sessionQuestions, setSessionQuestions] = useState<
     import('@/lib/types').Question[]
   >([]);
@@ -67,18 +74,7 @@ export default function Home() {
     [profile?.target_region, profile?.target_school_level]
   );
 
-  // ── 온보딩 완료 ──
-  const handleOnboardingComplete = useCallback(
-    async (region: string, schoolLevel: string) => {
-      await updateProfile({
-        target_region: region,
-        target_school_level: schoolLevel,
-      });
-    },
-    [updateProfile]
-  );
-
-  // ── 설정 변경 ──
+  // ── 온보딩 완료 / 설정 변경 (동일 로직) ──
   const handleUpdateProfile = useCallback(
     async (region: string, schoolLevel: string) => {
       await updateProfile({
@@ -142,13 +138,8 @@ export default function Home() {
     );
   }
 
-  // ── 미인증 → 로그인 페이지로 ──
-  if (!user) {
-    if (typeof window !== 'undefined') {
-      window.location.href = '/login';
-    }
-    return null;
-  }
+  // ── 미인증 → 로그인 리다이렉트 (useEffect에서 처리) ──
+  if (!authLoading && !user) return null;
 
   // ── 인증 에러 (RLS, 네트워크, DB 접근 실패 등) ──
   if (authError) {
@@ -195,7 +186,7 @@ export default function Home() {
 
   // ── 온보딩 (프로필 없거나 지역 미설정) ──
   if (needsOnboarding) {
-    return <OnboardingModal onComplete={handleOnboardingComplete} />;
+    return <OnboardingModal onComplete={handleUpdateProfile} />;
   }
 
   // ── 뷰 라우팅 ──
