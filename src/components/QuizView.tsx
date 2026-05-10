@@ -186,9 +186,17 @@ export default function QuizView({
             {badge.label}
           </div>
 
-          <p className="text-base font-semibold text-slate-800 leading-relaxed mb-6">
+          <p className="text-base font-semibold text-slate-800 leading-relaxed mb-4">
             {q.question}
           </p>
+
+          {q.image_url && (
+            <img
+              src={q.image_url}
+              alt="문제 이미지"
+              className="w-full max-w-full rounded-lg object-contain my-4"
+            />
+          )}
 
           {/* ── 프리미엄 잠금 UI ── */}
           {isLocked ? (

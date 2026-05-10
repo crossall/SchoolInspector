@@ -87,6 +87,7 @@ export function useQuestions() {
             .from('questions')
             .select('*')
             .eq('meta->>is_active', 'true')
+            .neq('type', 'essay')
             .range(from, from + PAGE_SIZE - 1);
 
           if (error) throw new Error(error.message);

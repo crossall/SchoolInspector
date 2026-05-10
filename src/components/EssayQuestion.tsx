@@ -4,26 +4,28 @@
 import { useState, useEffect } from 'react';
 import type { EssayQuestion as EssayQuestionType, GradingResult } from '@/lib/types';
 import { gradeEssay } from '@/app/actions/grade-essay';
+import ReportModal from './ReportModal';
 
 interface EssayQuestionProps {
   question: EssayQuestionType;
+  onNext?: () => void;
+  isLast?: boolean;
 }
 
-export default function EssayQuestion({ question }: EssayQuestionProps) {
+export default function EssayQuestion({ question, onNext, isLast = false }: EssayQuestionProps) {
   const draftKey = `essay_draft_${question.id}`;
 
   const [answer, setAnswer] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [result, setResult] = useState<GradingResult | null>(null);
   const [showModelAnswer, setShowModelAnswer] = useState(false);
+  const [showReport, setShowReport] = useState(false);
 
-  // 컴포넌트 마운트 시 이전 초안 복원
   useEffect(() => {
     const saved = localStorage.getItem(draftKey);
     if (saved) setAnswer(saved);
   }, [draftKey]);
 
-  // 답안 변경 시마다 localStorage에 저장
   useEffect(() => {
     if (answer) {
       localStorage.setItem(draftKey, answer);
@@ -60,11 +62,21 @@ export default function EssayQuestion({ question }: EssayQuestionProps) {
 
   return (
     <div className="space-y-5">
-      {/* 문제 영역 */}
+      {/* 문제 카드 */}
       <div className="bg-white rounded-2xl shadow-sm p-6">
-        <div className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-4 bg-rose-50 text-rose-600">
-          서술형 · 논술형
+        {/* 배지 + 오류 제보 */}
+        <div className="flex items-center justify-between mb-4">
+          <div className="inline-block px-3 py-1 rounded-full text-xs font-bold bg-rose-50 text-rose-600">
+            서술형 · 논술형
+          </div>
+          <button
+            onClick={() => setShowReport(true)}
+            className="flex items-center gap-1 px-2.5 py-1 rounded-full text-xs text-slate-400 hover:text-rose-500 hover:bg-rose-50 transition-all"
+          >
+            🚩 오류 제보
+          </button>
         </div>
+
         <p className="text-base font-semibold text-slate-800 leading-relaxed">
           {question.question.split('\n').map((line, i, arr) => (
             <span key={i}>
@@ -73,6 +85,15 @@ export default function EssayQuestion({ question }: EssayQuestionProps) {
             </span>
           ))}
         </p>
+
+        {question.image_url && (
+          <img
+            src={question.image_url}
+            alt="문제 이미지"
+            className="w-full max-w-full rounded-lg object-contain my-4"
+          />
+        )}
+
         {question.grading_rubric?.constraints && (
           <p className="mt-4 text-xs text-slate-400 border-t border-slate-100 pt-3">
             ✏️ {question.grading_rubric.constraints}
@@ -80,7 +101,7 @@ export default function EssayQuestion({ question }: EssayQuestionProps) {
         )}
       </div>
 
-      {/* 입력 영역 — 결과 표시 전까지만 */}
+      {/* 답안 입력 — 채점 전까지만 표시 */}
       {!result && (
         <div className="bg-white rounded-2xl shadow-sm p-6 space-y-4">
           <label className="text-sm font-semibold text-slate-600">내 답안 작성</label>
@@ -117,9 +138,7 @@ export default function EssayQuestion({ question }: EssayQuestionProps) {
           {/* 점수 헤더 */}
           <div
             className={`rounded-2xl p-6 border-2 ${
-              result.is_pass
-                ? 'bg-blue-50 border-blue-200'
-                : 'bg-red-50 border-red-200'
+              result.is_pass ? 'bg-blue-50 border-blue-200' : 'bg-orange-50 border-orange-200'
             }`}
           >
             <div className="flex items-center justify-between mb-3">
@@ -128,7 +147,7 @@ export default function EssayQuestion({ question }: EssayQuestionProps) {
                 <div className="flex items-end gap-2">
                   <span
                     className={`text-4xl font-extrabold ${
-                      result.is_pass ? 'text-blue-600' : 'text-red-600'
+                      result.is_pass ? 'text-blue-600' : 'text-orange-500'
                     }`}
                   >
                     {result.score}
@@ -140,17 +159,13 @@ export default function EssayQuestion({ question }: EssayQuestionProps) {
                 className={`px-4 py-2 rounded-full font-bold text-sm ${
                   result.is_pass
                     ? 'bg-blue-500 text-white'
-                    : 'bg-red-500 text-white'
+                    : 'bg-orange-100 text-orange-600'
                 }`}
               >
-                {result.is_pass ? '✅ 합격' : '❌ 불합격'}
+                {result.is_pass ? '✅ 합격' : '💪 보완 필요'}
               </span>
             </div>
-            <p
-              className={`text-sm font-medium ${
-                result.is_pass ? 'text-blue-700' : 'text-red-700'
-              }`}
-            >
+            <p className={`text-sm font-medium ${result.is_pass ? 'text-blue-700' : 'text-orange-700'}`}>
               {result.feedback_summary}
             </p>
           </div>
@@ -169,6 +184,9 @@ export default function EssayQuestion({ question }: EssayQuestionProps) {
                   </span>
                 ))}
               </div>
+              <p className="text-xs text-slate-400 mt-3 leading-relaxed">
+                ※ AI가 채점 기준(Rubric)을 바탕으로 추출한 권장 키워드이며, 의미가 상통하는 유의어를 사용하셨다면 정답으로 인정될 수 있습니다.
+              </p>
             </div>
           )}
 
@@ -206,14 +224,33 @@ export default function EssayQuestion({ question }: EssayQuestionProps) {
             </div>
           )}
 
-          {/* 다시 작성 */}
-          <button
-            onClick={handleRetry}
-            className="w-full py-3 border-2 border-indigo-300 text-indigo-500 font-bold rounded-xl hover:bg-indigo-50 transition-all active:scale-[0.98]"
-          >
-            다시 작성하기
-          </button>
+          {/* 액션 버튼 */}
+          <div className="flex gap-3">
+            <button
+              onClick={handleRetry}
+              className="flex-1 py-4 border-2 border-slate-300 text-slate-500 font-bold rounded-xl hover:border-indigo-300 hover:text-indigo-500 hover:bg-indigo-50 transition-all active:scale-[0.98]"
+            >
+              다시 작성하기
+            </button>
+            {onNext && (
+              <button
+                onClick={onNext}
+                className="flex-1 py-4 bg-indigo-500 text-white font-bold rounded-xl hover:bg-indigo-600 transition-all active:scale-[0.98]"
+              >
+                {isLast ? '훈련 완료 ✓' : '다음 문제로 →'}
+              </button>
+            )}
+          </div>
         </div>
+      )}
+
+      {/* 오류 제보 모달 */}
+      {showReport && (
+        <ReportModal
+          questionId={question.id}
+          questionText={question.question}
+          onClose={() => setShowReport(false)}
+        />
       )}
     </div>
   );

@@ -1,10 +1,10 @@
 // EssayPracticeView.tsx - 현장지원성 서술형 실전 훈련 뷰
 'use client';
 
+import { useState } from 'react';
 import type { EssayQuestion as EssayQuestionType } from '@/lib/types';
 import EssayQuestion from './EssayQuestion';
 
-// DB 연동 전 mock 문제 데이터
 const ESSAY_QUESTIONS: EssayQuestionType[] = [
   {
     id: 'essay-001',
@@ -31,6 +31,31 @@ const ESSAY_QUESTIONS: EssayQuestionType[] = [
       is_active: true,
     },
   },
+  {
+    id: 'essay-002',
+    category: '현장지원성',
+    subcategory: '교원 복무',
+    type: 'essay',
+    question:
+      '교사 A가 수업 중 학생 B를 훈육하는 과정에서 B의 보호자로부터 아동학대 신고를 받았다. 학교장은 해당 사안을 접수하였다.\n\n학교장이 아동학대 신고 접수 이후 취해야 할 법적·행정적 조치를 순서대로 서술하시오. (10점)',
+    explanation: '',
+    model_answer:
+      '① 아동학대범죄의 처벌 등에 관한 특례법에 따라 즉시 수사기관(경찰)에 신고한다.\n② 교육청(교육지원청)에 사안을 즉시 보고한다.\n③ 피해 아동의 안전을 위해 교사 A와 학생 B를 즉시 분리하는 조치를 취한다.\n④ 교원지위법에 따라 교사 A에 대한 직위해제 여부를 교육청과 협의하여 결정한다.\n⑤ 학교 내 사안처리 담당팀(학교폭력대책심의위원회 등)과 협력하여 후속 지원 조치를 마련한다.',
+    grading_rubric: {
+      required_keywords: ['아동학대처벌특례법', '수사기관 신고', '즉시 분리', '교육청 보고'],
+      reference_text: '아동학대범죄의 처벌 등에 관한 특례법 제10조',
+      constraints: '분량 기준: 400자 이상 800자 이내',
+    },
+    meta: {
+      year: 2024,
+      region: ['common'],
+      school_level: ['초등', '중등'],
+      difficulty: '상',
+      source: '현장지원성 모의고사 2024',
+      is_premium: true,
+      is_active: true,
+    },
+  },
 ];
 
 interface EssayPracticeViewProps {
@@ -39,7 +64,19 @@ interface EssayPracticeViewProps {
 }
 
 export default function EssayPracticeView({ isPremium, onBack }: EssayPracticeViewProps) {
-  const question = ESSAY_QUESTIONS[0];
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const question = ESSAY_QUESTIONS[currentIndex];
+  const isLast = currentIndex >= ESSAY_QUESTIONS.length - 1;
+
+  const handleNext = () => {
+    if (!isLast) {
+      setCurrentIndex((i) => i + 1);
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    } else {
+      onBack();
+    }
+  };
 
   return (
     <div className="min-h-screen bg-slate-50">
@@ -59,7 +96,9 @@ export default function EssayPracticeView({ isPremium, onBack }: EssayPracticeVi
           <p className="text-sm font-semibold text-slate-700">현장지원성 실전 훈련</p>
           <p className="text-xs text-slate-400">서술형 · AI 정밀 채점</p>
         </div>
-        <div className="w-11" />
+        <span className="text-sm text-slate-400 w-11 text-right">
+          {currentIndex + 1} / {ESSAY_QUESTIONS.length}
+        </span>
       </div>
 
       <div className="max-w-lg mx-auto px-4 py-6">
@@ -84,7 +123,12 @@ export default function EssayPracticeView({ isPremium, onBack }: EssayPracticeVi
             </button>
           </div>
         ) : (
-          <EssayQuestion question={question} />
+          <EssayQuestion
+            key={question.id}
+            question={question}
+            onNext={handleNext}
+            isLast={isLast}
+          />
         )}
       </div>
     </div>

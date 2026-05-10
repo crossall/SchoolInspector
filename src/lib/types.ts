@@ -68,6 +68,7 @@ interface BaseQuestion {
   meta: QuestionMeta;
   question: string;
   explanation: string;
+  image_url?: string;
 }
 
 export interface MultipleChoiceQuestion extends BaseQuestion {
