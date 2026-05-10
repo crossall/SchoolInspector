@@ -87,6 +87,8 @@ interface QuestionRow {
   items: string[] | null;
   answer_order: string[] | null;
   explanation: string;
+  grading_rubric: any;
+  model_answer: string | null;
 }
 
 const rows: QuestionRow[] = questions.map((q) => {
@@ -107,7 +109,9 @@ const rows: QuestionRow[] = questions.map((q) => {
     word_chips: (q.word_chips as string[]) || null,
     items: (q.items as string[]) || null,
     answer_order: (q.answer_order as string[]) || null,
-    explanation: q.explanation as string,
+    explanation: (q.explanation as string) || '',
+    grading_rubric: q.grading_rubric || null,
+    model_answer: (q.model_answer as string) || null,
   };
 });
 

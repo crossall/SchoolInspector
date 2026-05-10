@@ -200,7 +200,7 @@
   {
     "id": "seng_common_all_003",
     "category": "생기부기재요령",
-    "subcategory": "세부능력특기사항",
+    "subcategory": "교과 및 활동상황",
     "meta": {
       "year": 2023,
       "region": [
@@ -228,7 +228,7 @@
   {
     "id": "hakjuk_common_all_001",
     "category": "학적업무",
-    "subcategory": "전학",
+    "subcategory": "전입·전출",
     "meta": {
       "year": 2024,
       "region": [
@@ -258,7 +258,7 @@
   {
     "id": "hakjuk_common_cho_002",
     "category": "학적업무",
-    "subcategory": "전학",
+    "subcategory": "전입·전출",
     "meta": {
       "year": 2024,
       "region": [
@@ -284,7 +284,7 @@
   {
     "id": "hakjuk_common_all_003",
     "category": "학적업무",
-    "subcategory": "유예/면제",
+    "subcategory": "면제·유예 및 정원 외 학적관리",
     "meta": {
       "year": 2024,
       "region": [

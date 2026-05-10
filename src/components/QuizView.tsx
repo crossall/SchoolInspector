@@ -153,6 +153,7 @@ export default function QuizView({
   const renderCorrectAnswer = () => {
     if (q.type === 'fill_in_blank') return q.answer.join(' / ');
     if (q.type === 'ordering') return q.answer_order.join(' → ');
+    if (q.type === 'essay') return '(서술형 — 모범 답안 참조)';
     return q.answer;
   };
 

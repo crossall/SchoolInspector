@@ -87,6 +87,8 @@ export default function SessionSummary({
                       ? q.answer.join(' / ')
                       : q.type === 'ordering'
                       ? q.answer_order.join(' → ')
+                      : q.type === 'essay'
+                      ? '(서술형)'
                       : q.answer}
                   </p>
                 </div>

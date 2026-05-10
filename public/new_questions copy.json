@@ -200,7 +200,7 @@
   {
     "id": "seng_common_all_003",
     "category": "생기부기재요령",
-    "subcategory": "세부능력특기사항",
+    "subcategory": "교과 및 활동상황",
     "meta": {
       "year": 2023,
       "region": [
@@ -228,7 +228,7 @@
   {
     "id": "hakjuk_common_all_001",
     "category": "학적업무",
-    "subcategory": "전학",
+    "subcategory": "전입·전출",
     "meta": {
       "year": 2024,
       "region": [
@@ -258,7 +258,7 @@
   {
     "id": "hakjuk_common_cho_002",
     "category": "학적업무",
-    "subcategory": "전학",
+    "subcategory": "전입·전출",
     "meta": {
       "year": 2024,
       "region": [
@@ -284,7 +284,7 @@
   {
     "id": "hakjuk_common_all_003",
     "category": "학적업무",
-    "subcategory": "유예/면제",
+    "subcategory": "면제·유예 및 정원 외 학적관리",
     "meta": {
       "year": 2024,
       "region": [
@@ -384,7 +384,7 @@
   {
     "id": "gyoyuk_common_all_001",
     "category": "교육과정",
-    "subcategory": "총론",
+    "subcategory": "교육과정의 성격",
     "type": "multiple_choice",
     "meta": {
       "year": 2024,
@@ -414,7 +414,7 @@
   {
     "id": "gyoyuk_common_all_002",
     "category": "교육과정",
-    "subcategory": "총론",
+    "subcategory": "교육과정의 성격",
     "type": "multiple_choice",
     "meta": {
       "year": 2024,
@@ -444,7 +444,7 @@
   {
     "id": "gyoyuk_common_all_003",
     "category": "교육과정",
-    "subcategory": "총론",
+    "subcategory": "교육과정의 성격",
     "type": "multiple_choice",
     "meta": {
       "year": 2024,
@@ -474,7 +474,7 @@
   {
     "id": "gyoyuk_common_all_004",
     "category": "교육과정",
-    "subcategory": "총론",
+    "subcategory": "교육과정의 성격",
     "type": "multiple_choice",
     "meta": {
       "year": 2024,
@@ -504,7 +504,7 @@
   {
     "id": "gyoyuk_common_all_005",
     "category": "교육과정",
-    "subcategory": "총론",
+    "subcategory": "교육과정의 성격",
     "type": "ox_quiz",
     "meta": {
       "year": 2024,
@@ -530,7 +530,7 @@
   {
     "id": "gyoyuk_common_all_006",
     "category": "교육과정",
-    "subcategory": "총론",
+    "subcategory": "교육과정의 성격",
     "type": "ox_quiz",
     "meta": {
       "year": 2024,
@@ -556,7 +556,7 @@
   {
     "id": "gyoyuk_common_all_007",
     "category": "교육과정",
-    "subcategory": "총론",
+    "subcategory": "교육과정의 성격",
     "type": "ox_quiz",
     "meta": {
       "year": 2024,
@@ -584,7 +584,7 @@
   {
     "id": "gyoyuk_common_all_008",
     "category": "교육과정",
-    "subcategory": "총론",
+    "subcategory": "교육과정의 성격",
     "type": "fill_in_blank",
     "meta": {
       "year": 2024,
@@ -618,7 +618,7 @@
   {
     "id": "gyoyuk_common_all_009",
     "category": "교육과정",
-    "subcategory": "총론",
+    "subcategory": "교육과정의 성격",
     "type": "fill_in_blank",
     "meta": {
       "year": 2024,
@@ -654,7 +654,7 @@
   {
     "id": "gyoyuk_common_all_010",
     "category": "교육과정",
-    "subcategory": "총론",
+    "subcategory": "교육과정의 성격",
     "type": "ordering",
     "meta": {
       "year": 2024,
@@ -690,7 +690,7 @@
   {
     "id": "gyoyuk_common_all_011",
     "category": "교육과정",
-    "subcategory": "총론",
+    "subcategory": "교육과정의 성격",
     "type": "multiple_choice",
     "meta": {
       "year": 2024,
@@ -720,7 +720,7 @@
   {
     "id": "gyoyuk_common_all_012",
     "category": "교육과정",
-    "subcategory": "총론",
+    "subcategory": "교육과정의 성격",
     "type": "multiple_choice",
     "meta": {
       "year": 2024,
@@ -750,7 +750,7 @@
   {
     "id": "gyoyuk_common_all_013",
     "category": "교육과정",
-    "subcategory": "총론",
+    "subcategory": "교육과정의 성격",
     "type": "multiple_choice",
     "meta": {
       "year": 2024,
@@ -780,7 +780,7 @@
   {
     "id": "gyoyuk_common_all_014",
     "category": "교육과정",
-    "subcategory": "총론",
+    "subcategory": "교육과정의 성격",
     "type": "multiple_choice",
     "meta": {
       "year": 2024,
@@ -810,7 +810,7 @@
   {
     "id": "gyoyuk_common_all_015",
     "category": "교육과정",
-    "subcategory": "총론",
+    "subcategory": "교육과정의 성격",
     "type": "ox_quiz",
     "meta": {
       "year": 2024,
@@ -838,7 +838,7 @@
   {
     "id": "gyoyuk_common_all_016",
     "category": "교육과정",
-    "subcategory": "총론",
+    "subcategory": "교육과정의 성격",
     "type": "ox_quiz",
     "meta": {
       "year": 2024,
@@ -866,7 +866,7 @@
   {
     "id": "gyoyuk_common_all_017",
     "category": "교육과정",
-    "subcategory": "총론",
+    "subcategory": "교육과정의 성격",
     "type": "ox_quiz",
     "meta": {
       "year": 2024,
@@ -894,7 +894,7 @@
   {
     "id": "gyoyuk_common_all_018",
     "category": "교육과정",
-    "subcategory": "총론",
+    "subcategory": "교육과정의 성격",
     "type": "fill_in_blank",
     "meta": {
       "year": 2024,
@@ -929,7 +929,7 @@
   {
     "id": "gyoyuk_common_all_019",
     "category": "교육과정",
-    "subcategory": "총론",
+    "subcategory": "교육과정의 성격",
     "type": "fill_in_blank",
     "meta": {
       "year": 2024,
@@ -965,7 +965,7 @@
   {
     "id": "gyoyuk_common_all_020",
     "category": "교육과정",
-    "subcategory": "총론",
+    "subcategory": "교육과정의 성격",
     "type": "ordering",
     "meta": {
       "year": 2024,
@@ -999,7 +999,7 @@
   {
     "id": "gyoyuk_common_all_021",
     "category": "교육과정",
-    "subcategory": "설계와운영",
+    "subcategory": "학교 교육과정 설계와 운영",
     "type": "multiple_choice",
     "meta": {
       "year": 2024,
@@ -1029,7 +1029,7 @@
   {
     "id": "gyoyuk_common_all_022",
     "category": "교육과정",
-    "subcategory": "설계와운영",
+    "subcategory": "학교 교육과정 설계와 운영",
     "type": "ox_quiz",
     "meta": {
       "year": 2024,
@@ -1057,7 +1057,7 @@
   {
     "id": "gyoyuk_common_all_023",
     "category": "교육과정",
-    "subcategory": "설계와운영",
+    "subcategory": "학교 교육과정 설계와 운영",
     "type": "fill_in_blank",
     "meta": {
       "year": 2024,
@@ -1094,7 +1094,7 @@
   {
     "id": "gyoyuk_common_all_024",
     "category": "교육과정",
-    "subcategory": "설계와운영",
+    "subcategory": "학교 교육과정 설계와 운영",
     "type": "multiple_choice",
     "meta": {
       "year": 2024,
@@ -1124,7 +1124,7 @@
   {
     "id": "gyoyuk_common_all_025",
     "category": "교육과정",
-    "subcategory": "설계와운영",
+    "subcategory": "학교 교육과정 설계와 운영",
     "type": "multiple_choice",
     "meta": {
       "year": 2024,
@@ -1154,7 +1154,7 @@
   {
     "id": "gyoyuk_common_all_026",
     "category": "교육과정",
-    "subcategory": "설계와운영",
+    "subcategory": "학교 교육과정 설계와 운영",
     "type": "ordering",
     "meta": {
       "year": 2024,
@@ -1190,7 +1190,7 @@
   {
     "id": "gyoyuk_common_all_027",
     "category": "교육과정",
-    "subcategory": "설계와운영",
+    "subcategory": "학교 교육과정 설계와 운영",
     "type": "ox_quiz",
     "meta": {
       "year": 2024,
@@ -1218,7 +1218,7 @@
   {
     "id": "gyoyuk_common_all_028",
     "category": "교육과정",
-    "subcategory": "설계와운영",
+    "subcategory": "학교 교육과정 설계와 운영",
     "type": "multiple_choice",
     "meta": {
       "year": 2024,
@@ -1248,7 +1248,7 @@
   {
     "id": "gyoyuk_common_all_029",
     "category": "교육과정",
-    "subcategory": "설계와운영",
+    "subcategory": "학교 교육과정 설계와 운영",
     "type": "ox_quiz",
     "meta": {
       "year": 2024,
@@ -1276,7 +1276,7 @@
   {
     "id": "gyoyuk_common_all_030",
     "category": "교육과정",
-    "subcategory": "설계와운영",
+    "subcategory": "학교 교육과정 설계와 운영",
     "type": "fill_in_blank",
     "meta": {
       "year": 2024,
@@ -1310,7 +1310,7 @@
   {
     "id": "gyoyuk_common_all_031",
     "category": "교육과정",
-    "subcategory": "설계와운영",
+    "subcategory": "학교 교육과정 설계와 운영",
     "type": "multiple_choice",
     "meta": {
       "year": 2024,
@@ -1340,7 +1340,7 @@
   {
     "id": "gyoyuk_common_all_032",
     "category": "교육과정",
-    "subcategory": "설계와운영",
+    "subcategory": "학교 교육과정 설계와 운영",
     "type": "multiple_choice",
     "meta": {
       "year": 2024,
@@ -1370,7 +1370,7 @@
   {
     "id": "gyoyuk_common_all_033",
     "category": "교육과정",
-    "subcategory": "설계와운영",
+    "subcategory": "학교 교육과정 설계와 운영",
     "type": "multiple_choice",
     "meta": {
       "year": 2024,
@@ -1400,7 +1400,7 @@
   {
     "id": "gyoyuk_common_all_034",
     "category": "교육과정",
-    "subcategory": "설계와운영",
+    "subcategory": "학교 교육과정 설계와 운영",
     "type": "multiple_choice",
     "meta": {
       "year": 2024,
@@ -1430,7 +1430,7 @@
   {
     "id": "gyoyuk_common_all_035",
     "category": "교육과정",
-    "subcategory": "설계와운영",
+    "subcategory": "학교 교육과정 설계와 운영",
     "type": "ox_quiz",
     "meta": {
       "year": 2024,
@@ -1458,7 +1458,7 @@
   {
     "id": "gyoyuk_common_all_036",
     "category": "교육과정",
-    "subcategory": "설계와운영",
+    "subcategory": "학교 교육과정 설계와 운영",
     "type": "ox_quiz",
     "meta": {
       "year": 2024,
@@ -1486,7 +1486,7 @@
   {
     "id": "gyoyuk_common_all_037",
     "category": "교육과정",
-    "subcategory": "설계와운영",
+    "subcategory": "학교 교육과정 설계와 운영",
     "type": "ox_quiz",
     "meta": {
       "year": 2024,
@@ -1514,7 +1514,7 @@
   {
     "id": "gyoyuk_common_all_038",
     "category": "교육과정",
-    "subcategory": "설계와운영",
+    "subcategory": "학교 교육과정 설계와 운영",
     "type": "fill_in_blank",
     "meta": {
       "year": 2024,
@@ -1548,7 +1548,7 @@
   {
     "id": "gyoyuk_common_all_039",
     "category": "교육과정",
-    "subcategory": "설계와운영",
+    "subcategory": "학교 교육과정 설계와 운영",
     "type": "fill_in_blank",
     "meta": {
       "year": 2024,
@@ -1582,7 +1582,7 @@
   {
     "id": "gyoyuk_common_all_040",
     "category": "교육과정",
-    "subcategory": "총론",
+    "subcategory": "교육과정의 성격",
     "type": "ordering",
     "meta": {
       "year": 2024,
@@ -1618,7 +1618,7 @@
   {
     "id": "gyoyuk_common_all_041",
     "category": "교육과정",
-    "subcategory": "편성운영",
+    "subcategory": "학교 교육과정 설계와 운영",
     "type": "multiple_choice",
     "meta": {
       "year": 2024,
@@ -1648,7 +1648,7 @@
   {
     "id": "gyoyuk_common_cho_042",
     "category": "교육과정",
-    "subcategory": "초등편성",
+    "subcategory": "초등편성운영",
     "type": "ox_quiz",
     "meta": {
       "year": 2024,
@@ -1674,7 +1674,7 @@
   {
     "id": "gyoyuk_common_hi_043",
     "category": "교육과정",
-    "subcategory": "고등편성",
+    "subcategory": "중등편성운영",
     "type": "multiple_choice",
     "meta": {
       "year": 2024,
@@ -1702,7 +1702,7 @@
   {
     "id": "gyoyuk_common_mid_044",
     "category": "교육과정",
-    "subcategory": "중등편성",
+    "subcategory": "중등편성운영",
     "type": "fill_in_blank",
     "meta": {
       "year": 2024,
@@ -1734,7 +1734,7 @@
   {
     "id": "gyoyuk_common_cho_045",
     "category": "교육과정",
-    "subcategory": "초등편성",
+    "subcategory": "초등편성운영",
     "type": "multiple_choice",
     "meta": {
       "year": 2024,
@@ -1762,7 +1762,7 @@
   {
     "id": "gyoyuk_common_mid_046",
     "category": "교육과정",
-    "subcategory": "중등편성",
+    "subcategory": "중등편성운영",
     "type": "ox_quiz",
     "meta": {
       "year": 2024,
@@ -1788,7 +1788,7 @@
   {
     "id": "gyoyuk_common_hi_047",
     "category": "교육과정",
-    "subcategory": "고등편성",
+    "subcategory": "중등편성운영",
     "type": "ox_quiz",
     "meta": {
       "year": 2024,
@@ -1814,7 +1814,7 @@
   {
     "id": "gyoyuk_common_hi_048",
     "category": "교육과정",
-    "subcategory": "고등편성",
+    "subcategory": "중등편성운영",
     "type": "multiple_choice",
     "meta": {
       "year": 2024,
@@ -1842,7 +1842,7 @@
   {
     "id": "gyoyuk_common_hi_049",
     "category": "교육과정",
-    "subcategory": "고등편성",
+    "subcategory": "중등편성운영",
     "type": "fill_in_blank",
     "meta": {
       "year": 2024,
@@ -1876,7 +1876,7 @@
   {
     "id": "gyoyuk_common_hi_050",
     "category": "교육과정",
-    "subcategory": "고등편성",
+    "subcategory": "중등편성운영",
     "type": "ordering",
     "meta": {
       "year": 2024,
@@ -1908,7 +1908,7 @@
   {
     "id": "gyoyuk_common_hi_051",
     "category": "교육과정",
-    "subcategory": "고등편성",
+    "subcategory": "중등편성운영",
     "type": "multiple_choice",
     "meta": {
       "year": 2024,
@@ -1936,7 +1936,7 @@
   {
     "id": "gyoyuk_common_mid_052",
     "category": "교육과정",
-    "subcategory": "중등편성",
+    "subcategory": "중등편성운영",
     "type": "ox_quiz",
     "meta": {
       "year": 2024,
@@ -1962,7 +1962,7 @@
   {
     "id": "gyoyuk_common_mid_053",
     "category": "교육과정",
-    "subcategory": "중등편성",
+    "subcategory": "중등편성운영",
     "type": "fill_in_blank",
     "meta": {
       "year": 2024,
@@ -1996,7 +1996,7 @@
   {
     "id": "gyoyuk_common_all_054",
     "category": "교육과정",
-    "subcategory": "공통편성",
+    "subcategory": "교육과정 편성운영",
     "type": "multiple_choice",
     "meta": {
       "year": 2024,
@@ -2026,7 +2026,7 @@
   {
     "id": "gyoyuk_common_hi_055",
     "category": "교육과정",
-    "subcategory": "고등편성",
+    "subcategory": "중등편성운영",
     "type": "ordering",
     "meta": {
       "year": 2024,
@@ -2060,7 +2060,7 @@
   {
     "id": "gyoyuk_common_all_056",
     "category": "교육과정",
-    "subcategory": "공통편성",
+    "subcategory": "교육과정 편성운영",
     "type": "ox_quiz",
     "meta": {
       "year": 2024,
@@ -2087,7 +2087,7 @@
   {
     "id": "gyoyuk_common_hi_057",
     "category": "교육과정",
-    "subcategory": "고등편성",
+    "subcategory": "중등편성운영",
     "type": "multiple_choice",
     "meta": {
       "year": 2024,
@@ -2115,7 +2115,7 @@
   {
     "id": "gyoyuk_common_cho_058",
     "category": "교육과정",
-    "subcategory": "초등편성",
+    "subcategory": "초등편성운영",
     "type": "multiple_choice",
     "meta": {
       "year": 2024,
@@ -2143,7 +2143,7 @@
   {
     "id": "gyoyuk_common_hi_059",
     "category": "교육과정",
-    "subcategory": "고등편성",
+    "subcategory": "중등편성운영",
     "type": "fill_in_blank",
     "meta": {
       "year": 2024,
@@ -2177,7 +2177,7 @@
   {
     "id": "gyoyuk_common_all_060",
     "category": "교육과정",
-    "subcategory": "특수편성",
+    "subcategory": "특수편성운영",
     "type": "ox_quiz",
     "meta": {
       "year": 2024,
@@ -2205,7 +2205,7 @@
   {
     "id": "gyoyuk_common_all_061",
     "category": "교육과정",
-    "subcategory": "지원",
+    "subcategory": "학교 교육과정 지원",
     "type": "multiple_choice",
     "meta": {
       "year": 2024,
@@ -2235,7 +2235,7 @@
   {
     "id": "gyoyuk_common_all_062",
     "category": "교육과정",
-    "subcategory": "지원",
+    "subcategory": "학교 교육과정 지원",
     "type": "ox_quiz",
     "meta": {
       "year": 2024,
@@ -2263,7 +2263,7 @@
   {
     "id": "gyoyuk_common_all_063",
     "category": "교육과정",
-    "subcategory": "지원",
+    "subcategory": "학교 교육과정 지원",
     "type": "fill_in_blank",
     "meta": {
       "year": 2024,
@@ -2297,7 +2297,7 @@
   {
     "id": "gyoyuk_common_all_064",
     "category": "교육과정",
-    "subcategory": "지원",
+    "subcategory": "학교 교육과정 지원",
     "type": "ordering",
     "meta": {
       "year": 2024,
@@ -2331,7 +2331,7 @@
   {
     "id": "gyoyuk_common_all_065",
     "category": "교육과정",
-    "subcategory": "지원",
+    "subcategory": "학교 교육과정 지원",
     "type": "multiple_choice",
     "meta": {
       "year": 2024,
@@ -2361,7 +2361,7 @@
   {
     "id": "gyoyuk_common_all_066",
     "category": "교육과정",
-    "subcategory": "지원",
+    "subcategory": "학교 교육과정 지원",
     "type": "ox_quiz",
     "meta": {
       "year": 2024,
@@ -2389,7 +2389,7 @@
   {
     "id": "gyoyuk_common_all_067",
     "category": "교육과정",
-    "subcategory": "지원",
+    "subcategory": "학교 교육과정 지원",
     "type": "fill_in_blank",
     "meta": {
       "year": 2024,
@@ -2424,7 +2424,7 @@
   {
     "id": "gyoyuk_common_all_068",
     "category": "교육과정",
-    "subcategory": "지원",
+    "subcategory": "학교 교육과정 지원",
     "type": "multiple_choice",
     "meta": {
       "year": 2024,
@@ -2454,7 +2454,7 @@
   {
     "id": "gyoyuk_common_all_069",
     "category": "교육과정",
-    "subcategory": "지원",
+    "subcategory": "학교 교육과정 지원",
     "type": "ox_quiz",
     "meta": {
       "year": 2024,
@@ -2480,7 +2480,7 @@
   {
     "id": "gyoyuk_common_all_070",
     "category": "교육과정",
-    "subcategory": "지원",
+    "subcategory": "학교 교육과정 지원",
     "type": "multiple_choice",
     "meta": {
       "year": 2024,
@@ -2510,7 +2510,7 @@
   {
     "id": "gyoyuk_common_hi_071",
     "category": "교육과정",
-    "subcategory": "고등편성",
+    "subcategory": "중등편성운영",
     "type": "multiple_choice",
     "meta": {
       "year": 2024,
@@ -2538,7 +2538,7 @@
   {
     "id": "gyoyuk_common_cho_072",
     "category": "교육과정",
-    "subcategory": "초등편성",
+    "subcategory": "초등편성운영",
     "type": "ox_quiz",
     "meta": {
       "year": 2024,
@@ -2564,7 +2564,7 @@
   {
     "id": "gyoyuk_common_all_073",
     "category": "교육과정",
-    "subcategory": "기본사항",
+    "subcategory": "교육과정 편성운영",
     "type": "fill_in_blank",
     "meta": {
       "year": 2024,
@@ -2600,7 +2600,7 @@
   {
     "id": "gyoyuk_common_all_074",
     "category": "교육과정",
-    "subcategory": "학교자율시간",
+    "subcategory": "교육과정 편성운영",
     "type": "ordering",
     "meta": {
       "year": 2024,
@@ -2636,7 +2636,7 @@
   {
     "id": "gyoyuk_common_mid_075",
     "category": "교육과정",
-    "subcategory": "중등편성",
+    "subcategory": "중등편성운영",
     "type": "multiple_choice",
     "meta": {
       "year": 2024,
@@ -2664,7 +2664,7 @@
   {
     "id": "gyoyuk_common_hi_076",
     "category": "교육과정",
-    "subcategory": "고등편성",
+    "subcategory": "중등편성운영",
     "type": "ox_quiz",
     "meta": {
       "year": 2024,
@@ -2690,7 +2690,7 @@
   {
     "id": "gyoyuk_common_all_077",
     "category": "교육과정",
-    "subcategory": "평가",
+    "subcategory": "학교 교육과정 설계와 운영",
     "type": "fill_in_blank",
     "meta": {
       "year": 2024,
@@ -2725,7 +2725,7 @@
   {
     "id": "gyoyuk_common_all_078",
     "category": "교육과정",
-    "subcategory": "지원",
+    "subcategory": "학교 교육과정 지원",
     "type": "multiple_choice",
     "meta": {
       "year": 2024,
@@ -2755,7 +2755,7 @@
   {
     "id": "gyoyuk_common_all_079",
     "category": "교육과정",
-    "subcategory": "특수편성",
+    "subcategory": "특수편성운영",
     "type": "ox_quiz",
     "meta": {
       "year": 2024,
@@ -2783,7 +2783,7 @@
   {
     "id": "gyoyuk_common_all_080",
     "category": "교육과정",
-    "subcategory": "기본사항",
+    "subcategory": "교육과정 편성운영",
     "type": "multiple_choice",
     "meta": {
       "year": 2024,

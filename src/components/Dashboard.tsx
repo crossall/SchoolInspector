@@ -16,7 +16,7 @@ import {
 } from 'lucide-react';
 import type { Question, Profile } from '@/lib/types';
 import { extractCategories } from '@/lib/quiz-engine';
-import SubcategoryModal from './SubcategoryModal';
+import SubcategoryModal, { type SubcategoryGroup } from './SubcategoryModal';
 import SettingsModal from './SettingsModal';
 import PaywallModal from './PaywallModal';
 
@@ -84,6 +84,7 @@ interface DashboardProps {
   incorrectCount: number;
   onStartCategory: (categoryKeys: string[], subcategory: string | null, label: string) => void;
   onStartIncorrect: () => void;
+  onStartEssay: () => void;
   onResetProgress: () => void;
   onUpdateProfile: (region: string, schoolLevel: string) => void;
   onSignOut: () => void;
@@ -97,6 +98,7 @@ export default function Dashboard({
   incorrectCount,
   onStartCategory,
   onStartIncorrect,
+  onStartEssay,
   onResetProgress,
   onUpdateProfile,
   onSignOut,
@@ -131,6 +133,22 @@ export default function Dashboard({
     [categoryMap]
   );
 
+  // 다중 categoryKey 카드는 그룹별로 분리 (서브카테고리 모달 섹션용)
+  const getSubcategoryGroups = useCallback(
+    (card: CategoryCard): SubcategoryGroup[] | undefined => {
+      if (card.categoryKeys.length <= 1) return undefined;
+      const groups = card.categoryKeys
+        .map((key) => ({
+          categoryKey: key,
+          label: key,
+          subcategories: categoryMap[key] ?? [],
+        }))
+        .filter((g) => g.subcategories.length > 0);
+      return groups.length > 0 ? groups : undefined;
+    },
+    [categoryMap]
+  );
+
   // 카드에 문제가 하나라도 있는지 (prefs + categoryKeys 기준)
   const hasQuestions = useCallback(
     (card: CategoryCard): boolean =>
@@ -150,9 +168,11 @@ export default function Dashboard({
   );
 
   const handleSubcategorySelect = useCallback(
-    (subcategory: string | null) => {
+    (subcategory: string | null, categoryKeyOverride?: string) => {
       if (!activeCard) return;
-      onStartCategory(activeCard.categoryKeys, subcategory, activeCard.label);
+      const keys = categoryKeyOverride ? [categoryKeyOverride] : activeCard.categoryKeys;
+      const label = categoryKeyOverride ?? activeCard.label;
+      onStartCategory(keys, subcategory, label);
       setActiveCard(null);
     },
     [activeCard, onStartCategory]
@@ -313,6 +333,41 @@ export default function Dashboard({
           </div>
         </section>
 
+        {/* ── 현장지원성 실전 훈련 카드 ── */}
+        <button
+          onClick={onStartEssay}
+          className="w-full flex items-start gap-4 rounded-2xl p-5 shadow-sm transition-all active:scale-[0.98] hover:shadow-md text-left relative overflow-hidden"
+          style={{ background: 'linear-gradient(135deg, #1e1b4b 0%, #312e81 60%, #4c1d95 100%)' }}
+        >
+          {/* 배지들 */}
+          <div className="absolute top-4 right-4 flex flex-col items-end gap-1.5">
+            <span className="flex items-center gap-1 bg-amber-400/90 text-amber-900 rounded-full px-2.5 py-1 text-xs font-extrabold">
+              🔒 PRO
+            </span>
+            <span className="flex items-center gap-1 bg-white/20 text-white/90 rounded-full px-2.5 py-1 text-xs font-bold">
+              💻 PC 환경 권장
+            </span>
+            <span className="flex items-center gap-1 bg-indigo-500/40 text-indigo-100 rounded-full px-2.5 py-1 text-xs font-bold">
+              🤖 Claude AI 채점
+            </span>
+          </div>
+
+          {/* 아이콘 */}
+          <div className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0 bg-white/15 mt-0.5">
+            <span className="text-2xl">✍️</span>
+          </div>
+
+          {/* 텍스트 */}
+          <div className="pr-24">
+            <h3 className="text-base font-extrabold text-white leading-tight mb-1">
+              현장지원성 실전 훈련
+            </h3>
+            <p className="text-xs text-indigo-200 leading-snug">
+              실제 장학사 시험과 동일한 서술형/기획안 작성 훈련 및 AI 정밀 채점
+            </p>
+          </div>
+        </button>
+
         {/* ── 학습 이력 초기화 ── */}
         <button
           onClick={() => {
@@ -334,6 +389,7 @@ export default function Dashboard({
           bgColor={activeCard.bgColor}
           icon={<activeCard.Icon size={22} />}
           subcategories={getSubcategories(activeCard)}
+          groups={getSubcategoryGroups(activeCard)}
           onSelect={handleSubcategorySelect}
           onClose={() => setActiveCard(null)}
         />

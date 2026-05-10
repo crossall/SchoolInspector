@@ -96,11 +96,32 @@ export interface OrderingQuestion extends BaseQuestion {
   options: string[];      // 빈 배열 (하위호환)
 }
 
+export interface GradingRubric {
+  required_keywords: string[];
+  reference_text: string;
+  constraints: string;
+}
+
+export interface EssayQuestion extends BaseQuestion {
+  type: 'essay';
+  grading_rubric?: GradingRubric;
+  model_answer?: string;
+}
+
+export interface GradingResult {
+  score: number;
+  is_pass: boolean;
+  feedback_summary: string;
+  missing_keywords: string[];
+  detailed_feedback: string;
+}
+
 export type Question =
   | MultipleChoiceQuestion
   | OxQuestion
   | FillInBlankQuestion
-  | OrderingQuestion;
+  | OrderingQuestion
+  | EssayQuestion;
 
 // ── 상수 ──
 

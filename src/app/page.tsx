@@ -14,8 +14,9 @@ import Dashboard from '@/components/Dashboard';
 import QuizView from '@/components/QuizView';
 import type { SessionResults } from '@/components/QuizView';
 import SessionSummary from '@/components/SessionSummary';
+import EssayPracticeView from '@/components/EssayPracticeView';
 
-type View = 'dashboard' | 'quiz' | 'summary';
+type View = 'dashboard' | 'quiz' | 'summary' | 'essay';
 
 export default function Home() {
   const {
@@ -119,6 +120,11 @@ export default function Home() {
     setView('quiz');
   }, [questions, prefs, incorrectIds]);
 
+  // ── 현장지원성 세션 시작 ──
+  const handleStartEssay = useCallback(() => {
+    setView('essay');
+  }, []);
+
   // ── 퀴즈 완료 ──
   const handleFinish = useCallback((results: SessionResults) => {
     setSessionResults(results);
@@ -190,6 +196,15 @@ export default function Home() {
   }
 
   // ── 뷰 라우팅 ──
+  if (view === 'essay') {
+    return (
+      <EssayPracticeView
+        isPremium={profile?.is_pro ?? false}
+        onBack={() => setView('dashboard')}
+      />
+    );
+  }
+
   if (view === 'quiz' && sessionQuestions.length > 0) {
     return (
       <QuizView
@@ -230,6 +245,7 @@ export default function Home() {
       incorrectCount={incorrectCount}
       onStartCategory={handleStartCategory}
       onStartIncorrect={handleStartIncorrect}
+      onStartEssay={handleStartEssay}
       onResetProgress={resetAll}
       onUpdateProfile={handleUpdateProfile}
       onSignOut={signOut}
