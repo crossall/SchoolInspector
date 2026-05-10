@@ -3,10 +3,7 @@
 import Anthropic from '@anthropic-ai/sdk';
 import type { GradingResult, GradingRubric } from '@/lib/types';
 
-const anthropic = new Anthropic({
-  apiKey: process.env.ANTHROPIC_API_KEY,
-});
-
+// Anthropic client will be instantiated inside gradeEssay function after verifying API key
 const SYSTEM_PROMPT = `당신은 교육전문직(장학사) 임용시험 수석 채점관입니다.
 답안을 채점 기준에 따라 엄밀하게 평가하고, **반드시 아래 JSON 형식만** 출력하세요. 다른 텍스트는 절대 출력하지 마세요.
 
@@ -24,6 +21,8 @@ export async function gradeEssay(
   rubric: GradingRubric,
   userAnswer: string
 ): Promise<GradingResult> {
+  const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
+
   const userMessage = `[채점 기준]
 필수 키워드: ${rubric.required_keywords.join(', ')}
 참고 지침: ${rubric.reference_text}
@@ -53,7 +52,7 @@ ${userAnswer}`;
     ],
   });
 
-  const textBlock = response.content.find((b) => b.type === 'text');
+  const textBlock = response.content.find((b: { type: string }) => b.type === 'text');
   if (!textBlock || textBlock.type !== 'text') {
     throw new Error('Claude로부터 응답을 받지 못했습니다.');
   }
