@@ -121,13 +121,23 @@ export default function EssayQuestion({ question, onNext, isLast = false }: Essa
               </p>
             </div>
           ) : (
-            <button
-              onClick={handleSubmit}
-              disabled={!answer.trim()}
-              className="w-full py-4 bg-indigo-500 text-white font-bold rounded-xl hover:bg-indigo-600 transition-all active:scale-[0.98] disabled:opacity-40 disabled:cursor-not-allowed"
-            >
-              답안 제출 및 AI 채점하기
-            </button>
+            <>
+              <button
+                onClick={handleSubmit}
+                disabled={!answer.trim()}
+                className="w-full py-4 bg-indigo-500 text-white font-bold rounded-xl hover:bg-indigo-600 transition-all active:scale-[0.98] disabled:opacity-40 disabled:cursor-not-allowed"
+              >
+                답안 제출 및 AI 채점하기
+              </button>
+              {onNext && (
+                <button
+                  onClick={onNext}
+                  className="w-full py-2 text-sm text-slate-400 hover:text-slate-600 transition-colors"
+                >
+                  {isLast ? '마지막 문제 건너뛰기' : '이 문제 건너뛰기 →'}
+                </button>
+              )}
+            </>
           )}
         </div>
       )}

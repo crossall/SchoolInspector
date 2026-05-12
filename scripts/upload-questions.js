@@ -74,7 +74,7 @@ const rows = questions.map((q) => {
     word_chips: q.word_chips || null,
     items: q.items || null,
     answer_order: q.answer_order || null,
-    explanation: q.explanation,
+    explanation: q.explanation || '',
   };
 });
 
